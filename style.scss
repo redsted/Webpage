@@ -1,0 +1,145 @@
+$light-green: #7ed56f;
+$default-green: #55c57a;
+$dark-green: #28b485;
+
+$color-grey-light-1: #f7f7f7;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+// Utilities
+.u-center-text {
+	text-align: center;
+}
+
+.u-margin-bottom-small {
+	margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+	margin-bottom: 4rem;
+}
+.u-margin-bottom-big {
+	margin-bottom: 8rem;
+}
+
+// Styles
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: #777;
+	padding: 3rem;
+}
+
+.header {
+	height: 95vh;
+	background-image: linear-gradient(to right bottom, rgba($light-green, 0.8), rgba( $dark-green, 0.8)), url(https://images.unsplash.com/photo-1513589980158-1cf22d83e198?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=7ba277e98d519e8acd63ee2e7215d810);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%)
+}
+
+.logo-box {
+	position: absolute;
+	top:4rem;
+	left:4rem;
+		.logo {
+		height: 3.5rem;
+		}
+}
+
+.text-box {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+	
+	.heading-primary-main {
+		display: block;
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+	}
+	.heading-primary-sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+	}
+}
+
+.section-about {
+	background-color: $color-grey-light-1;
+	padding: 25rem 0;
+	margin-top: -20vh;
+}
+
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block;
+	background-image: linear-gradient(to right, $light-green, $dark-green);
+	-webkit-background-clip: text;
+	color: transparent;
+	letter-spacing: .2rem;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 2rem;
+	padding: 0 25rem;
+}
+
+.heading-tertiary {
+	font-size: 1.6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: 1.6rem;
+	
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
+
+.btn-text {
+	&:link,
+	&:visited {
+		font-size: 1.6rem;
+		color: $default-green;
+		display: inline-block;
+		text-decoration: none;
+		border-bottom: 1px solid $default-green;
+		padding: 3px;
+		transition: all .2s;
+	}
+	&:hover {
+		background-color: $default-green;
+		color: #fff;
+		box-shadow: 0 1rem 2rem rgba(black, .15);
+		transform: translateY(-2px);
+	}
+	&:active {
+		box-shadow: 0 .5rem 1rem rgba(black, .15);
+		transform: translateY(0px);
+	}
+}
